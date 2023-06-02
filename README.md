@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-Eto tyt v proekte
 =======
 # djangoBovsSite
+<<<<<<< HEAD
 >>>>>>> refs/remotes/origin/main
 ```
 class UserPostListView(ListView):
@@ -19,3 +18,9 @@ class UserPostListView(ListView):
         context['blog_post_user_list'] = queryset.order_by('-date_created')
         return context
 ```
+=======
+
+#[pytest]
+DJANGO_SETTINGS_MODULE = djangoBovsSite.settings
+python_files = tests.py test_*.py *_tests.py
+>>>>>>> 37119c3742eb0062d2464d7928a45b7d226a32e3
