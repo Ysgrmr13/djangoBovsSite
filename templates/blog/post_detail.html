@@ -1,0 +1,45 @@
+{% extends "blog/base_blog.html" %}
+{% block title%}Post{%endblock%}
+{% block content_blog %}
+
+
+<div class="row">
+    <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+
+        <div class="intro">
+            <h1 class="text-center" data-bss-hover-animate="pulse">&nbsp;
+
+
+                {{blog_post_detail.title}}
+
+
+
+
+            </h1>
+            <p class="text-center">
+                <span class="by">by</span> <a href="#">{{post.author}}</a>&nbsp;&nbsp;<span class="date">{{post.date_created|date:"F d Y"}} </span>
+            {{blog_post_detail.content|safe }}
+            </p>
+        </div>
+
+
+        <div class="text">
+            <p>
+
+
+
+            </p>
+            <figure class="figure d-block"></figure>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{%endblock%}

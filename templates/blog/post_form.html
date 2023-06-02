@@ -1,0 +1,42 @@
+{% extends "blog/base_blog.html" %}
+{% load crispy_forms_tags %}
+
+{% block title%}Post{%endblock%}
+
+{% block content_blog %}
+<div class="row">
+  <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+     
+      <div class="intro">
+          <h3 class="text-center" data-bss-hover-animate="pulse">&nbsp;
+              Расскажите, что у вас нового.
+          </h3>
+          <p class="text-center">
+
+<form action="" method="POST">
+{% csrf_token %}
+{{form.media}}
+{{form|crispy}}
+<div class="form-group">
+   <button class="btn btn-info" type="submit">Отправить</button>
+  {#<a class="btn btn-danger" href="{% url 'blog-home' %}">Cancel</a>#}
+</div>
+
+</form>
+
+<div class="text">
+  <p>
+      
+
+
+  </p>
+  <figure class="figure d-block"></figure>
+</div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

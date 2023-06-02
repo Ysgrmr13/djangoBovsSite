@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{#базовый файл блога#}
+
+{% block content %}
+    <section class="article-clean">
+        <div class="container"><!--контейнер-->
+            {% block content_blog %}{% endblock %}
+        </div><!-- End контейнер-->
+    </section>
+{%endblock%}

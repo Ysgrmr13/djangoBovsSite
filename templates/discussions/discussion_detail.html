@@ -1,0 +1,21 @@
+{% extends "blog/base_blog.html" %}
+
+{% block content_blog %}
+<div class="row">
+    <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+
+        <div class="intro">
+            {% if user.is_authenticated%}
+            {% if messages %}
+             <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }} by {{user }}</li>
+            {% endfor %}
+      </ul>
+            {% else%}{% endif %}
+            {% endif %}
+        </div>
+        
+    </div>
+</div>
+{% endblock content_blog %}
