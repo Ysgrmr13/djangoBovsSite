@@ -1,2 +1,0 @@
-# djangoBovsSite
-Practice lesson Bovsa
